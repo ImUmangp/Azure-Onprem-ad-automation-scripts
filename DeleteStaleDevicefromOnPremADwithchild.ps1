@@ -1,3 +1,9 @@
+#This PowerShell script automates the deletion of stale devices and all their child objects from on-premises Active Directory (AD). 
+#It ensures a comprehensive cleanup by recursively deleting child objects before removing the parent device object.
+#Prerequisites
+#1.	Ensure the Active Directory module is imported in the PowerShell session.
+#2.	Prepare a CSV file (StaleDevices.csv) containing a Name column with the names of the stale devices to be deleted.
+
 # Parameters
 $InputFile = "StaleDevices.csv" # Specify the input CSV file name containing stale device names
 $LogFile = "DeletedDevices.log" # Specify a log file to keep track of deleted devices
